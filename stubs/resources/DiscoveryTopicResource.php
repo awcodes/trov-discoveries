@@ -29,7 +29,6 @@ use FilamentCurator\Forms\Components\MediaPicker;
 use Trov\Forms\Components\PageBuilder;
 use TrovComponents\Tables\Columns\TitleWithStatus;
 use TrovComponents\Tables\Filters\SoftDeleteFilter;
-use Trov\Resources\RelationManagers\LinkSetsRelationManager;
 use App\Filament\Resources\Trov\DiscoveryTopicResource\Pages\EditDiscoveryTopic;
 use App\Filament\Resources\Trov\DiscoveryTopicResource\Pages\ListDiscoveryTopics;
 use App\Filament\Resources\Trov\DiscoveryTopicResource\Pages\CreateDiscoveryTopic;
@@ -108,7 +107,7 @@ class DiscoveryTopicResource extends Resource
 
     public static function getRelations(): array
     {
-        return array_merge([], config('trov.features.link_sets.active') ? [LinkSetsRelationManager::class] : []);
+        return [];
     }
 
     public static function getPages(): array
