@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Trov\Models\Author;
 use Trov\Traits\HasMeta;
 use Trov\Traits\HasAuthor;
 use Trov\Traits\IsSluggable;

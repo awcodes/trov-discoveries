@@ -2,9 +2,7 @@
 
 namespace App\Models;
 
-use Trov\Models\Author;
 use Trov\Traits\HasMeta;
-use Trov\Traits\HasLinkSet;
 use Trov\Traits\IsSluggable;
 use App\Models\DiscoveryArticle;
 use Trov\Traits\HasFeaturedImage;
@@ -21,7 +19,6 @@ class DiscoveryTopic extends Model
     use HasMeta;
     use SoftDeletes;
     use HasFeaturedImage;
-    use HasLinkSet;
 
     /**
      * The attributes that are mass assignable.
