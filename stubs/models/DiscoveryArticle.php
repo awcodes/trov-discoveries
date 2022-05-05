@@ -33,6 +33,7 @@ class DiscoveryArticle extends Model
         'status',
         'author_id',
         'content',
+        'excerpt',
         'published_at',
     ];
 

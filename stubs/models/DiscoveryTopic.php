@@ -29,8 +29,8 @@ class DiscoveryTopic extends Model
         'title',
         'slug',
         'status',
+        'excerpt',
         'content',
-        'published_at',
     ];
 
     /**
@@ -41,7 +41,6 @@ class DiscoveryTopic extends Model
     protected $casts = [
         'id' => 'integer',
         'indexable' => 'boolean',
-        'published_at' => 'datetime',
         'content' => 'array',
     ];
 

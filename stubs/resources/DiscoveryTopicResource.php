@@ -20,6 +20,7 @@ use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use TrovComponents\Forms\TitleWithSlug;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Textarea;
 use Trov\Forms\Components\FeaturedImage;
 use Filament\Forms\Components\DatePicker;
 use Filament\Tables\Filters\SelectFilter;
@@ -56,7 +57,8 @@ class DiscoveryTopicResource extends Resource
         return FixedSidebar::make()
             ->schema([
                 TitleWithSlug::make('title', 'slug', '/discover/topics/')->columnSpan('full'),
-                FeaturedImage::make(),
+                Textarea::make('excerpt')
+                    ->required(),
                 Section::make('Page Content')
                     ->schema([
                         PageBuilder::make('content')
