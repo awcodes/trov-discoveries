@@ -95,6 +95,9 @@ class DiscoveryArticleResource extends Resource
             ->columns([
                 FeaturedImageColumn::make('featured_image')->label('Thumb'),
                 TitleWithStatus::make('title')
+                    ->statuses(Status::class)
+                    ->hiddenOn(Status::Published->name)
+                    ->colors(Status::colors())
                     ->searchable()
                     ->sortable(),
                 TextColumn::make('topic.title')->searchable()->sortable(),
