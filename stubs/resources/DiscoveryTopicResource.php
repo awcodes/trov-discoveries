@@ -10,7 +10,6 @@ use Trov\Forms\Components\Meta;
 use Trov\Traits\HasSoftDeletes;
 use Filament\Resources\Resource;
 use TrovComponents\Enums\Status;
-use TrovComponents\Filament\Panel;
 use Filament\Forms\Components\Group;
 use TrovComponents\Forms\Timestamps;
 use Filament\Forms\Components\Select;
@@ -64,7 +63,7 @@ class DiscoveryTopicResource extends Resource
                         PageBuilder::make('content')
                     ])
             ], [
-                Panel::make('Details')
+                Section::make('Details')
                     ->collapsible()
                     ->schema([
                         Select::make('status')
